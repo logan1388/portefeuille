@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 
 export class Header extends Component {
   render() {
@@ -8,17 +9,17 @@ export class Header extends Component {
         <Navbar inverse collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#brand">React-Bootstrap</a>
+            <a href="#">Portefeuille</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem href="#">
-              Wallet
+            <NavItem componentClass='span'>
+              <Link to="/">Wallet</Link>
             </NavItem>
-            <NavItem href="#">
-              Expense
+            <NavItem componentClass='span'>
+              <Link to="/expense">Expense</Link>
             </NavItem>         
           </Nav>
         </Navbar.Collapse>
